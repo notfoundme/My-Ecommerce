@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class BottomBarWidget extends StatelessWidget {
@@ -36,7 +35,6 @@ class BottomBarWidget extends StatelessWidget {
                 Navigator.pushNamed(context, '/user');
               },
               icon: Icon(Icons.person),
-              
               color: Colors.white,
               iconSize: 35,
             )

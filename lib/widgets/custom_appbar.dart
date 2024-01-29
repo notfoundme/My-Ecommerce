@@ -19,8 +19,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
-              child: const Text(
-                "My Ecommerce",
+              child: Text(
+                title,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
