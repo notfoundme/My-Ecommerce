@@ -37,7 +37,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/wishlist');
+            },
             icon: const Icon(
               Icons.favorite,
               color: Colors.black,
