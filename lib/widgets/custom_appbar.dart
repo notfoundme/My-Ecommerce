@@ -10,20 +10,20 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       title: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
           child: Container(
-            color: Colors.black,
+            // color: Colors.black,
             child: Padding(
               padding:
-                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 0),
               child: Text(title,
                   style: Theme.of(context)
                       .textTheme
-                      .headlineLarge!
-                      .copyWith(color: Colors.white)),
+                      .headlineMedium!
+                      .copyWith(color: Colors.black)),
             ),
           ),
         ),
