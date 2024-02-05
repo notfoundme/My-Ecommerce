@@ -13,22 +13,22 @@ TextTheme textTheme() {
     headlineLarge: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w800,
-      fontSize: 24,
+      fontSize: 18,
     ),
     headlineMedium: TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.w800,
-      fontSize: 18,
+      fontWeight: FontWeight.w600,
+      fontSize: 10,
     ),
     headlineSmall: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,
-      fontSize: 14,
+      fontSize: 8,
     ),
     bodyLarge: TextStyle(
       color: Color.fromRGBO(0, 0, 0, 1),
       fontWeight: FontWeight.bold,
-      fontSize: 18,
+      fontSize: 14,
     ),
     bodyMedium: TextStyle(
       color: Colors.black,

@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:ecommerce_with_max/models/category_model.dart';
+import 'package:ecommerce_with_max/models/product_model.dart';
 import 'package:ecommerce_with_max/widgets/custom_navbar.dart';
 import 'package:ecommerce_with_max/widgets/hero_carousel_card.dart';
+import 'package:ecommerce_with_max/widgets/product_card.dart';
 import 'package:ecommerce_with_max/widgets/section_title.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +17,8 @@ class HomeScreen extends StatelessWidget {
   static const String routeName = '/';
   static Route route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: routeName),
-      builder: (_) => HomeScreen(),
+      settings: const RouteSettings(name: routeName),
+      builder: (_) => const HomeScreen(),
     );
   }
 
@@ -24,8 +26,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: CustomAppBar(title: 'MY Ecommerce'),
-        bottomNavigationBar: BottomBarWidget(),
+        appBar: const CustomAppBar(title: 'MY Ecommerce'),
+        bottomNavigationBar: const BottomBarWidget(),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -48,7 +50,28 @@ class HomeScreen extends StatelessWidget {
                       .toList(),
                 ),
               ),
-              SectionTitle(title: "RECOMMENDED")
+              const SectionTitle(title: "RECOMMENDED"),
+              SizedBox(
+                height: 165,
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: Product.products.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      //Product card ma mageko product lau Produxt.products[ko index deko]
+                      return Padding(
+                        padding: const EdgeInsets.all(4.0),
+                        child: ProductCard(
+                          product: Product.products[index],
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              )
             ],
           ),
         ),

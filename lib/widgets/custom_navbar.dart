@@ -18,7 +18,7 @@ class BottomBarWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/');
               },
-              icon: Icon(Icons.home),
+              icon: const Icon(Icons.home),
               color: Colors.white,
               iconSize: 35,
             ),
@@ -26,7 +26,7 @@ class BottomBarWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/cart');
               },
-              icon: Icon(Icons.shopping_cart),
+              icon: const Icon(Icons.shopping_cart),
               color: Colors.white,
               iconSize: 35,
             ),
@@ -34,7 +34,7 @@ class BottomBarWidget extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/user');
               },
-              icon: Icon(Icons.person),
+              icon: const Icon(Icons.person),
               color: Colors.white,
               iconSize: 35,
             )
